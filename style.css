@@ -645,8 +645,9 @@ header .menu.responsive li {
     }
 
     #contact .right iframe {
-        width: 400px;
-        margin-right: 60px;
+        width: 350px;
+        /* margin-right: 30px; */
+        margin-left: 20px;
     }
 
     #contact .right {
