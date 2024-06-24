@@ -31,6 +31,7 @@ header .logo img {
 .menu li {
     margin: 20px;
     list-style: none;
+    width: max-content;
 }
 .menu li a  {
     font-size: 18px;
@@ -147,7 +148,7 @@ header .logo img {
 .nous {
     display: flex;
     margin-left: 50px;
-    margin-top: 100px;
+    margin-top: 5px;
     padding-top: 30px;
     
 }
@@ -173,7 +174,6 @@ header .logo img {
 
 #parole h1 {
     text-align: center;
-    margin-top: 80px;
     border-bottom: 1px solid #54816D;
     color: #0C2C43;
     line-height: 50px;
@@ -226,7 +226,6 @@ header .logo img {
 #contact .left {
     height: 500px;
     width: 25%;
-    margin-right: 250px;
 }
 
 
@@ -247,6 +246,10 @@ form {
     border-radius: 5px;
     border: 1px solid #0C2C43;
     margin-top: 5px;
+}
+
+#contact .right {
+    width: 40%;
 }
 
 #contact label {
@@ -276,10 +279,10 @@ form {
 
 .join {
     height: 80px;
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-left: 70px;
+    /* margin-left: 70px; */
     margin-top: 20px;
 }
 
@@ -288,14 +291,6 @@ form {
     width: 40%;
     margin-left: 35px; 
 }
-
-#contact .right {
-    margin-left: 100px;
-}
-
-
-
-
 
 
 footer  {
@@ -331,7 +326,11 @@ footer .right {
 
 @media only screen and (min-width: 998px)  and (max-width: 1199px) {
     .menu {
-        width: 40%;
+        width: max-content;;
+    }
+
+    .menu li {
+        width: max-content;
     }
 
     #services .tache {
@@ -377,11 +376,13 @@ footer .right {
 
     #apropos {
         margin-top: 0;
+
         
     }
 
     #apropos .nous {
         flex-direction: column;
+        margin-left: 160px;
     }
     
     #apropos .right {
@@ -403,12 +404,13 @@ footer .right {
         width: 60%;
         margin-top: 40px;
     }
+
     
     
     
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
 
     header .logo img {
         margin-left: 0;
@@ -455,6 +457,7 @@ footer .right {
 
     #apropos .nous {
         flex-direction: column;
+        margin-left: 140px;
     }
     
     #apropos .right {
@@ -520,6 +523,11 @@ footer .right {
 
    #contact .join {
         flex-direction: column;
+        margin-left: 70px;
+   }
+
+   #contact .join img {
+    width: 30%;
    }
 
    header .menu {
@@ -545,23 +553,23 @@ header {
     content: "";
     height: 3px;
     width: 28px;
-    background-color: #3D6B63;
+    background-color: #ffffff;
     border-radius: 6px;
-    box-shadow: 0 10px 0 #3D6B63;
+    box-shadow: 0 10px 0 #ffffff;
     transform: translateY(-10px);
     transition: 0.5s;
 
 }
 .toggle_menu.active::before{
     transform: translateY(0) rotate(135deg);
-    box-shadow: 0 0 0 #3D6B63;
+    box-shadow: 0 0 0 #ffffff;
 }
   .toggle_menu::after {
     position: absolute;
     content: "";
     height: 3px;
     width: 28px;
-    background-color: #3D6B63;
+    background-color: #ffffff;
     border-radius: 6px;
     transform: translateY(10px);
     transition: 0.5s;
@@ -594,13 +602,15 @@ header .menu.responsive li {
 
 }
 
-@media (max-width:500px) {
+@media (max-width:530px) {
     header .logo img {
         width: 10%;
         margin-left: 0;
+        
     }
     #acceuil .slogan h1 {
         font-size: 23px;
+        
     }
 
     #acceuil .slogan {
@@ -625,6 +635,10 @@ header .menu.responsive li {
         font-size: 18px;
     }
 
+    #apropos .nous {
+       margin-left: 70px;
+    }
+
     #parole {
         margin-top: 300px;
     }
@@ -636,18 +650,17 @@ header .menu.responsive li {
 
     #contact .join  {
         flex-direction: column;
-        margin-left: 140px;
+        margin-left: 130px;
         margin-top: 40px;
     }
 
     #contact .left {
-        margin-right: 110px;
+        margin-right: 130px;
     }
 
     #contact .right iframe {
         width: 350px;
-        /* margin-right: 30px; */
-        margin-left: 20px;
+        margin-left: 10px;
     }
 
     #contact .right {
@@ -665,24 +678,25 @@ header .menu.responsive li {
     }
 
     footer img {
-        width: 40%;
+        width: 70%;
         margin: 2px;
     }
 
     footer .right ul {
         flex-direction: column;
+        margin-bottom: 40px;
     }
 
     footer {
         bottom: 0;
         flex-direction: column;
-        height: 120px;
+        height: 140px;
     }
 
     footer .left p {
         font-size: 20px;
         margin-right: 40px;
-    }
+    } 
 
         
 }
